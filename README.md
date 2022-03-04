@@ -59,3 +59,4 @@ Python 3.8.0
 - GhostLeader119 - Caden Campbell - (cadecamp9@gmail.com)
 - shots28 - Sam Hootini
 
+Team Planner - https://cconover2.notion.site/Team-Planner-Cycle-c50a8e6ab1384306b1496d368b768c50
