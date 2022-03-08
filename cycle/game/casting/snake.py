@@ -12,19 +12,12 @@ class Snake(Actor):
     Attributes:
         _points (int): The number of points the food is worth.
     """
-<<<<<<< HEAD
 
-    def __init__(self):
+    def __init__(self, head_symbol, color, x, y):
         super().__init__()
         self._segments = []
-        self._prepare_body(head_symbol="@")
-=======
-    def __init__(self, head_symbol="@"):
-        super().__init__()
-        self._segments = []
-        self._prepare_body(head_symbol)
-        self._player_type = head_symbol
->>>>>>> 846a56570aa7e5052d10b3ab3e3508d352c557c8
+        self._prepare_body(head_symbol, x ,y)
+        self._color = color
 
     def get_segments(self):
         return self._segments
@@ -54,27 +47,21 @@ class Snake(Actor):
             segment.set_position(position)
             segment.set_velocity(velocity)
             segment.set_text("#")
-            segment.set_color(constants.color)
+            segment.set_color(self._color)
             self._segments.append(segment)
 
     def turn_head(self, velocity):
         self._segments[0].set_velocity(velocity)
-<<<<<<< HEAD
 
-    def _prepare_body(self, head_symbol="@"):
-=======
-    
-    def _prepare_body(self, head_symbol="8"):
->>>>>>> 846a56570aa7e5052d10b3ab3e3508d352c557c8
-        x = int(constants.MAX_X / 2)
-        y = int(constants.MAX_Y / 2)
 
-        for i in range(constants.SNAKE_LENGTH, head_symbol="@"):
+    def _prepare_body(self, head_symbol, x, y):
+
+        for i in range(constants.SNAKE_LENGTH):
             position = Point(x - i * constants.CELL_SIZE, y)
             velocity = Point(1 * constants.CELL_SIZE, 0)
             text = head_symbol if i == 0 else "#"
-            color = constants.YELLOW if i == 0 else constants.GREEN
-
+            color = constants.YELLOW if i == 0 else self._color
+            
             segment = Actor()
             segment.set_position(position)
             segment.set_velocity(velocity)
