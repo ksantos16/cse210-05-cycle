@@ -50,19 +50,19 @@ class Cast:
             results.extend(self._actors[group])
         return results
 
-    def get_first_actor(self, group):
-        """Gets the first actor in the given group.
+    # def get_actor(self, group, actor_number):
+    #     """Gets the first actor in the given group.
         
-        Args:
-            group (string): The name of the group.
+    #     Args:
+    #         group (string): The name of the group.
             
-        Returns:
-            List: The first actor in the group.
-        """
-        result = None
-        if group in self._actors.keys():
-            result = self._actors[group][0]
-        return result
+    #     Returns:
+    #         List: The first actor in the group.
+    #     """
+    #     result = None
+    #     if group in self._actors.keys():
+    #         result = self._actors[group][actor_number]
+    #     return result
 
     def remove_actor(self, group, actor):
         """Removes an actor from the given group.
