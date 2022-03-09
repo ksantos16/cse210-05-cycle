@@ -27,7 +27,7 @@ def main():
     x1 = int(constants.MAX_X / 4)
     y1 = int(constants.MAX_Y / 4)
     cast.add_actor("snakes", Snake("@", constants.GREEN, x, y))
-    cast.add_actor("snakes", Snake("#", constants.RED, x1, y1))
+    cast.add_actor("snakes", Snake("@", constants.RED, x1, y1))
     cast.add_actor("scores", Score())
 
     # start the game
