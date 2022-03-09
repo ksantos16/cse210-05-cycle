@@ -53,6 +53,5 @@ class ControlActorsAction(Action):
             self._direction = Point(0, constants.CELL_SIZE)
 
         
-        snake = cast.get_first_actor("snakes")
+        snake = cast.get_actor("snakes", 0)
         snake.turn_head(self._direction)
-
