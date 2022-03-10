@@ -8,15 +8,9 @@ from game.scripting.move_actors_action import MoveActorsAction
 class HandleCollisionsAction(Action):
     """
     An update action that handles interactions between the actors.
-<<<<<<< HEAD
-
-    The responsibility of HandleCollisionsAction is to handle the situation when the snake collides
-    with the food, or the snake collides with its segments, or the game is over.
-=======
     
     The responsibility of HandleCollisionsAction is to handle the situation when the snakes collides
     with each other's segments, or the game is over.
->>>>>>> bf1c8757af44f0115c6724c38f190faafb6864bf
 
     Attributes:
         _is_game_over (boolean): Whether or not the game is over.
@@ -37,7 +31,6 @@ class HandleCollisionsAction(Action):
             # self._handle_food_collision(cast)
             self._handle_segment_collision(cast)
             self._handle_game_over(cast)
-<<<<<<< HEAD
 
     def _handle_food_collision(self, cast):
         """Updates the score nd moves the food if the snake collides with the food.
@@ -57,9 +50,6 @@ class HandleCollisionsAction(Action):
             score.add_points(points)
             # food.reset()
 
-=======
-    
->>>>>>> bf1c8757af44f0115c6724c38f190faafb6864bf
     def _handle_segment_collision(self, cast):
         """Sets the game over flag if the snake collides with one of its segments.
 
@@ -79,13 +69,8 @@ class HandleCollisionsAction(Action):
                     self._is_game_over = True
 
     def _handle_game_over(self, cast):
-<<<<<<< HEAD
-        """Shows the 'game over' message and turns the snake and food white if the game is over.
-
-=======
         """Shows the 'game over' message and turns the snakes white if the game is over.
         
->>>>>>> bf1c8757af44f0115c6724c38f190faafb6864bf
         Args:
             cast (Cast): The cast of Actors in the game.
         """
