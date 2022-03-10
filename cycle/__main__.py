@@ -26,7 +26,7 @@ def main():
     y1 = int(constants.MAX_Y / 4)
     cast.add_actor("snakes", Snake("@", constants.GREEN, x, y))
     cast.add_actor("snakes", Snake("@", constants.RED, x1, y1))
-    cast.add_actor("scores", Score())
+    # cast.add_actor("scores", Score())
 
     # start the game
     keyboard_service = KeyboardService()
