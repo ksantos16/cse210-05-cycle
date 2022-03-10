@@ -5,14 +5,14 @@ from game.casting.snake import Snake
 
 
 class Snake2(Snake):
-
     """
-    A long limbless reptile.
+    # Polymophism from Snake
+    A long limbless reptile. This snake is player 2.
 
     The responsibility of Snake is to move itself.
 
     Attributes:
-        _points (int): The number of points the food is worth.
+        _segments(list): A list of segments for the snake.
     """
 
     def __init__(self):
