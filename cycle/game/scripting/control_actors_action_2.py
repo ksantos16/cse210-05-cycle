@@ -5,6 +5,7 @@ from game.shared.point import Point
 
 
 class ControlActorsAction_2(ControlActorsAction):
+    # Polymophism from ControlActorsAction
     # Override the execute(cast, script) method as follows:
 
     def execute(self, cast, script):

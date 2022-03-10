@@ -1,9 +1,5 @@
 from game.scripting.action import Action
 
-# ksantos16
-# TODO: Implement MoveActorsAction class here!
-
-
 class MoveActorsAction(Action):
     # Override the execute(cast, script) method as follows:
 
