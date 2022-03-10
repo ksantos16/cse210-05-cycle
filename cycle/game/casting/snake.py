@@ -5,12 +5,14 @@ from game.shared.point import Point
 
 class Snake(Actor):
     """
-    A long limbless reptile.
+    A long limbless reptile. This snake is player 1.
 
     The responsibility of Snake is to move itself.
 
     Attributes:
-        _points (int): The number of points the food is worth.
+        _segments(list): A list of segments for the snake.
+        _set_color(color): The color of the snake
+        _prepare_body: Gives the symbol of the head, sets the color to the snakes, and gives Points
     """
 
     def __init__(self, head_symbol, color, x, y):

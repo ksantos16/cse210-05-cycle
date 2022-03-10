@@ -55,7 +55,7 @@ Python 3.8.0
 # Authors
 
 - cconover2b - Craig Conover - (cconover2@byui.edu)
-- ksantos16 - Kira Santos - (matt.kira15@gmail.com)
+- ksantos16/ksantos - Kira Santos - (matt.kira15@gmail.com)
 - GhostLeader119 - Caden Campbell - (cadecamp9@gmail.com)
 - shots28 - Sam Hootini
 

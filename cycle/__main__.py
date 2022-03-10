@@ -1,7 +1,6 @@
 import constants
 
 from game.casting.cast import Cast
-from game.casting.food import Food
 from game.casting.score import Score
 from game.casting.snake import Snake
 from game.scripting.script import Script
@@ -21,7 +20,6 @@ def main():
 
     # create the cast
     cast = Cast()
-    # cast.add_actor("foods", Food())
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y / 2)
     x1 = int(constants.MAX_X / 4)
