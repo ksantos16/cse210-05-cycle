@@ -21,6 +21,11 @@ class ControlActorsAction(Action):
         """
         self._keyboard_service = keyboard_service
         self._direction = Point(constants.CELL_SIZE, 0)
+        self._move_left = 'a'
+        self._move_right = 'd'
+        self._move_up = 'w'
+        self._move_down = 's'
+        self._player_number = 0
 
     def execute(self, cast, script):
         """Executes the control actors action.
@@ -31,27 +36,32 @@ class ControlActorsAction(Action):
         """
 
         #If you want to alter keybindings for player 1 alter these variables
-        _move_left = 'a'
-        _move_right = 'd'
-        _move_up = 'w'
-        _move_down = 's'
+        
+
+        snake = cast.get_actor("snakes", self._player_number)
 
         # left
-        if self._keyboard_service.is_key_down(_move_left):
+        if self._keyboard_service.is_key_down(self._move_left):
             self._direction = Point(-constants.CELL_SIZE, 0)
+            snake.grow_tail(1, snake._color)
         
         # right
-        if self._keyboard_service.is_key_down(_move_right):
+        if self._keyboard_service.is_key_down(self._move_right):
             self._direction = Point(constants.CELL_SIZE, 0)
+            snake.grow_tail(1, snake._color)
         
         # up
-        if self._keyboard_service.is_key_down(_move_up):
+        if self._keyboard_service.is_key_down(self._move_up):
             self._direction = Point(0, -constants.CELL_SIZE)
+            snake.grow_tail(1, snake._color)
         
         # down
-        if self._keyboard_service.is_key_down(_move_down):
+        if self._keyboard_service.is_key_down(self._move_down):
             self._direction = Point(0, constants.CELL_SIZE)
+            snake.grow_tail(1, snake._color)
 
         
-        snake = cast.get_actor("snakes", 0)
+        
         snake.turn_head(self._direction)
+        
+

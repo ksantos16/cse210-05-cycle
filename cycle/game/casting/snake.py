@@ -18,6 +18,7 @@ class Snake(Actor):
     def __init__(self, head_symbol, color, x, y):
         super().__init__()
         self._segments = []
+        self._color = color
         self._prepare_body(head_symbol, color, x, y)
         self.set_color = color
 
